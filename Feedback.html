@@ -1,0 +1,112 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<style>
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 24px;
+      margin: auto;
+      width: 50%;
+    }
+    
+    label {
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+
+</style>
+
+<title>Welcome</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="index.html"><img src ="WarnerBros.png "  width="50" height="50"></a>
+    </div>
+    <div class="navbar-menu">
+      <ul>
+        <li><a href="MoviePage.html">Movies</a></li>
+        <li><a href="TvShows.html">TV Shows</a></li>
+        <li><a href="Games&Apps.html">Games &amp; Apps</a></li>
+        <li><a href="Collections.html">Collections</a></li>
+      </ul>
+    </div>
+    <div class="navbar-search">
+      <form>
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+
+
+  <form id="feedback-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="improvements">What would you like to see improved?</label>
+    <textarea id="improvements" name="improvements" required></textarea>
+
+    <label for="rating">Rating:</label>
+    <select id="rating" name="rating">
+        <option value="1">1 star</option>
+        <option value="2">2 stars</option>
+        <option value="3">3 stars</option>
+        <option value="4">4 stars</option>
+        <option value="5">5 stars</option>
+    </select>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Display thank you message
+        var form = document.getElementById('feedback-form');
+        form.innerHTML = '<h3>Thank you for your feedback!</h3>';
+
+        // Redirect to home page after a delay
+        setTimeout(function() {
+            window.location.href = 'index.html'; // Replace 'home.html' with your actual home page URL
+        }, 3000); // 3000 milliseconds (3 seconds) delay before redirecting
+    });
+</script>
+
+
+  </body>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://web.facebook.com/WarnerBrosPictures/?brand_redir=165103458184"><img src="https://th.bing.com/th?id=OIP.6-Etwy2306AInODxxbDK6gHaHY&w=250&h=249&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Facebook" width="40px" height="40px"></a>
+      <a href="https://twitter.com/wbpictures"><img src="https://th.bing.com/th?id=OIP.P3GJZi8Z-DGPx1JS3u5yOgHaGl&w=265&h=235&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Twitter" width="40px" height="40px"></a>
+      <a href="https://www.youtube.com/@WarnerBrosPictures"><img src="https://th.bing.com/th?id=OIP.3rSTYI2unlM-9raJQJW3lwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" title="Youtube" width="40" height="40" alt="Subscribe To Our Youtube Channel"></a>
+    </div>
+    <a href="Feedback.html" class="button feedback-button">Feedback</a>
+  </footer>
+  
+  
+
+</html>

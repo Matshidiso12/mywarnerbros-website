@@ -1,0 +1,113 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    background-color: #141414;
+  }
+
+
+
+</style>
+
+<title>Welcome</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="index.html"><img src ="WarnerBros.png "  width="50" height="50"></a>
+    </div>
+    <div class="navbar-menu">
+      <ul>
+        <li><a href="MoviePage.html">Movies</a></li>
+        <li><a href="TvShows.html">TV Shows</a></li>
+        <li><a href="Games&Apps.html">Games &amp; Apps</a></li>
+        <li><a href="Collections.html">Collections</a></li>
+      </ul>
+    </div>
+    <div class="navbar-search">
+      <form>
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+
+  <div class="slideshow">
+    <iframe width="1414" height="400" src="https://www.youtube.com/embed/Way9Dexny3w?autoplay=1&mute=1" title="Dune: Part Two | Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
+    <iframe width="1414" height="400" src="https://www.youtube.com/embed/IEtrVBV1sNc?autoplay=1&mute=1" title="Scooby-Doo! | Lost in the Woods 🏕️ | WB Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  
+    <script>
+              
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    
+    function showSlide(slideIndex) {
+      slides.forEach((slide) => slide.classList.remove('active'));
+      slides[slideIndex].classList.add('active');
+    }
+    
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+    
+    showSlide(currentSlide);
+    setInterval(nextSlide, 4000);
+    </script>
+
+
+<div class="trending">
+    <h1 class="homepage-text">Trending Movies</h1>
+    <div class="trending-slideshow">
+      <div class="trending-slide">
+        <a href="Showing1.html">
+          <img src="https://m.media-amazon.com/images/M/MV5BMzk2ZmYxNTUtODlhMi00NzE2LTkwMTctYjg0ODQ1ZjkyNzJmXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" alt="Godzilla vs Kong">
+          <h3 class="homepage-text">Godzilla vs Kong</h3>
+        </a>
+      </div>
+      <div class="trending-slide">
+        <a href="Showing3.html">
+          <img src="https://m.media-amazon.com/images/M/MV5BYjI3NDg0ZTEtMDEwYS00YWMyLThjYjktMTNlM2NmYjc1OGRiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg" alt="Zack Snyder's Justice League">
+          <h3 class="homepage-text">Zack Snyder's Justice League</h3>
+        </a>
+      </div>
+      <div class="trending-slide">
+        <a href="TvShow1.html">
+          <img src="https://m.media-amazon.com/images/M/MV5BYTM0NjZjYjItM2JiYS00NmU5LWJmMTMtZjQ0OWU3Mzk1ZWZjXkEyXkFqcGdeQXVyMTAxNDE3MTE5._V1_.jpg" alt="The Sandman">
+          <h3 class="homepage-text">The Sandman</h3>
+        </a>
+      </div>
+      <div class="trending-slide">
+        <a href="Trending1.html">
+          <img src="https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_FMjpg_UX1000_.jpg" alt="The Batman">
+          <h3 class="homepage-text">The Batman</h3>
+        </a>
+      </div>
+      <div class="trending-slide">
+        <a href="TvShow2.html">
+          <img src="https://i.ebayimg.com/images/g/FSIAAOSwg2xZehD6/s-l1600.jpg" alt="Gotham">
+          <h3 class="homepage-text">Gotham</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+    
+</body>
+
+<footer>
+  <div class="social-icons">
+    <a href="https://web.facebook.com/WarnerBrosPictures/?brand_redir=165103458184"><img src="https://th.bing.com/th?id=OIP.6-Etwy2306AInODxxbDK6gHaHY&w=250&h=249&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Facebook" width="40px" height="40px"></a>
+    <a href="https://twitter.com/wbpictures"><img src="https://th.bing.com/th?id=OIP.P3GJZi8Z-DGPx1JS3u5yOgHaGl&w=265&h=235&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Twitter" width="40px" height="40px"></a>
+    <a href="https://www.youtube.com/@WarnerBrosPictures"><img src="https://th.bing.com/th?id=OIP.3rSTYI2unlM-9raJQJW3lwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" title="Youtube" width="40" height="40" alt="Subscribe To Our Youtube Channel"></a>
+  </div>
+  <a href="Feedback.html" class="button feedback-button">Feedback</a>
+</footer>
+</html>
+
